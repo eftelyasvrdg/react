@@ -1,10 +1,18 @@
+//temel kütüphane -> React
+//useState -> bilgi tutmaya sağlar (kullanıcı adı vb)
 import React, { useState } from 'react';
+
+//kullanıcağımız bileşenler
 import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 
+
+//tüm giriş ekranını temsil ediyor
 export default function LoginScreen() {
+    //username ve password alma = useState boş string olarak başlatıyor
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  //giriş bilgileri kontrollü
   const handleLogin = () => {
     if (username === 'admin' && password === 'password') {
       Alert.alert('Success', 'You are logged in!');
@@ -13,6 +21,7 @@ export default function LoginScreen() {
     }
   };
 
+  //html kısmı
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
@@ -34,6 +43,7 @@ export default function LoginScreen() {
   );
 }
 
+//css kısmı
 const styles = StyleSheet.create({
   container: {
     flex: 1,

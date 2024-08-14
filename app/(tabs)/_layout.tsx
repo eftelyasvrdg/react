@@ -1,4 +1,7 @@
+//sekmeler arası gezebilmek için tabs 
 import { Tabs } from 'expo-router';
+
+//temel react ekleme
 import React from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
